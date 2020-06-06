@@ -18,5 +18,6 @@ public class Main {
         		"\r\nThe Customer's address is "+ data2,"CustomerProfile",JOptionPane.PLAIN_MESSAGE );
 
         demo.setVisible(true);
+        //結束後可以轉至ButtonFrame
     }
 }
