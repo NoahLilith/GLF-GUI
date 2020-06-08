@@ -6,6 +6,7 @@ public class Main {
 
         JFrame demo = new JFrame("GoodLifeFood");
         demo.setSize(300, 300);
+        new ButtonFrame();
         demo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         String name = JOptionPane.showInputDialog("Enter your name");

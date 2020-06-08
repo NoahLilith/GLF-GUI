@@ -26,6 +26,16 @@ public class AddOrder extends JFrame{
 					public void actionPerformed(ActionEvent event) {
 						saveJList.setListData(orderJList.getSelectedValuesList().toArray(
 								new String[0]));
+						String price = JOptionPane.showInputDialog("Enter the price($/1kg)");
+				        String kilo = JOptionPane.showInputDialog("Enter how much you want to buy(kg)");
+				        
+				        int data1 = Integer.parseInt(price);
+				        int data2 = Integer.parseInt(kilo);
+				        int sum = data1*data2;
+				        
+				        JOptionPane.showMessageDialog(null,"The price($/1kg) is "+ data1 +
+				        		"\r\nYou want to buy "+ data2 + "\r\nThe total price is " + sum 
+				        		,"Summarize",JOptionPane.PLAIN_MESSAGE );
 					}
 				}
 				);
