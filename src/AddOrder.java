@@ -8,6 +8,7 @@ public class AddOrder extends JFrame{
 	private final JList<String> saveJList;
 	private static final String[] orderNames = {"Fruit", "Vegetable", "Cake"};
 	private JButton saveJButton;
+	private JButton exitJButton;
 	
 	public AddOrder() {
 		super("Add Order");
@@ -37,10 +38,16 @@ public class AddOrder extends JFrame{
 				        		"\r\nYou want to buy "+ data2 + "\r\nThe total price is " + sum 
 				        		,"Summarize",JOptionPane.PLAIN_MESSAGE );
 					}
-				}
-				);
-		
+				});
 		add(saveJButton);
+		
+		exitJButton = new JButton("Exit");
+		exitJButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent event) {
+				System.exit(0);
+			}
+		});
+		add(exitJButton);
 		
 		saveJList = new JList<String>();
 		saveJList.setVisibleRowCount(1);
